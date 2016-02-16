@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="/ember-easy-orm/icon/favicon.png">
+    <title>ember-easy-orm</title>
+    <link rel="stylesheet" href="/ember-easy-orm/css/pure.css" type="text/css">
+    <link rel="stylesheet" href="/ember-easy-orm/css/base.css" type="text/css">
+</head>
+<body>
+  <div id="container">
+    <div class="m-nav">
+    <div class="wrap">
+        <a class="home" href="/ember-easy-orm/">
+          ember-easy-orm
+        </a>
+        <ul class="nav external" >
+            <li>
+                <a href="https://github.com/wecatch/ember-easy-orm">Github</a>
+            </li>
+            <li>
+                <a href="http://wecatch.me">Wecatch</a>
+            </li>
+        </ul>
+        <ul class="nav internal" >
+            
+        </ul>
+    </div>
+</div>
+
+    <div class="m-hero">
+    <div class="wrap">
+        <div class="header">ember-easy-orm</div>
+        <p class="desc" >A easy ORM for ember app, simple and flexible</p>
+        <div class="units">
+        
+            <a class="pure-button pure-red button-large"  href="https://www.npmjs.com/package/ember-easy-orm">Download latest v0.0.5</a>
+        </div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="m-article">
+        <header class="article-header">
+            <h1 class="article-title" itemprop="name">Getting started</h1>
+        </header>
+        <div class="content">
+            <p>This Ember addon support some basic model layer for ajax request like find, create, delete and so on. When you use this addon, please remove ember-data. It also support some mixin for component to easily manage form</p>
+<h2 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h2><p>In your ember-cli project, install this addon from npm </p>
+<figure class="highlight q"><table><tr><td class="code"><pre><span class="line">npm install ember-easy-orm --<span class="built_in">save</span>-<span class="built_in">dev</span></span><br></pre></td></tr></table></figure>
+<p>or install the latest version from github</p>
+<figure class="highlight groovy"><table><tr><td class="code"><pre><span class="line">npm install <span class="string">https:</span><span class="comment">//github.com/wecatch/ember-easy-orm --save-dev</span></span><br></pre></td></tr></table></figure>
+<h2 id="Use_this_addon_in_your_ember_application"><a href="#Use_this_addon_in_your_ember_application" class="headerlink" title="Use this addon in your ember application"></a>Use this addon in your ember application</h2><p>In ember-cli project, create one model</p>
+<figure class="highlight dockerfile"><table><tr><td class="code"><pre><span class="line">ember g model <span class="built_ins">user</span></span><br></pre></td></tr></table></figure>
+<p>modify model/user.js code like this</p>
+<figure class="highlight dart"><table><tr><td class="code"><pre><span class="line"><span class="literal">import</span> model from <span class="string">'ember-easy-orm/mixins/model'</span></span><br><span class="line"></span><br><span class="line"><span class="literal">export</span> <span class="keyword">default</span> Ember.<span class="built_in">Object</span>.extend(model, &#123;</span><br><span class="line">    </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>then in any route, you can use store service to connect to your backend server api</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">import</span> Ember <span class="keyword">from</span> <span class="string">'ember'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Ember.Route.extend(&#123;</span><br><span class="line">    model() &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.store.find(<span class="string">'user'</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h1 id="Store_service_api"><a href="#Store_service_api" class="headerlink" title="Store service  api"></a>Store service  api</h1><ul>
+<li>find</li>
+<li>findOne</li>
+<li>save</li>
+<li>createRecord</li>
+<li>deleteRecord</li>
+<li>ajax</li>
+<li>request.get</li>
+<li>request.post</li>
+<li>request.put</li>
+<li>request.delete</li>
+</ul>
+
+        </div>
+    </div>
+</div>
+
+  </div>
+    <div class="footer">
+    <p>
+        Powered by <a href="http://wecatch.me">wecatch</a>
+    </p>
+</div>
+</body>
+</html>
