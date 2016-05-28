@@ -86,6 +86,24 @@ orm model
 @submodule model
 */
 
+/**
+
+@example
+    import Ember from &#x27;ember&#x27;;
+    import model, {DS} from &#x27;ember-easy-orm/mixins/model&#x27;
+    
+    const {attr} = DS;
+
+    export default Ember.Object.extend(model, {
+        url: &#x27;/v1/pic&#x27;,
+        model: {
+            &#x27;refer&#x27;: attr(&#x27;string&#x27;),
+            &#x27;desc&#x27;: attr(&#x27;string&#x27;),
+        }
+    });
+
+*/
+
 import Ember from &#x27;ember&#x27;;
 import ajax from &#x27;./ajax&#x27;;
 

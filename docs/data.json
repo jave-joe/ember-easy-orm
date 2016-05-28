@@ -79,7 +79,7 @@
             "fors": {},
             "namespaces": {},
             "file": "addon/mixins/model.js",
-            "line": 39
+            "line": 57
         },
         "ajax": {
             "name": "ajax",
@@ -127,7 +127,7 @@
             "module": "mixins",
             "namespace": "",
             "file": "addon/mixins/model.js",
-            "line": 39,
+            "line": 57,
             "description": "orm model"
         },
         "pagination": {
@@ -238,7 +238,7 @@
             "submodule": "model",
             "namespace": "",
             "file": "addon/mixins/model.js",
-            "line": 39,
+            "line": 57,
             "description": "mixin in ORM model",
             "access": "public",
             "tagname": ""
@@ -403,7 +403,7 @@
             "line": 166,
             "description": "post request data serializer",
             "itemtype": "method",
-            "name": "getSerializer",
+            "name": "postSerializer",
             "params": [
                 {
                     "name": "data",
@@ -423,7 +423,7 @@
             "line": 176,
             "description": "put request data serializer",
             "itemtype": "method",
-            "name": "getSerializer",
+            "name": "putSerializer",
             "params": [
                 {
                     "name": "data",
@@ -443,7 +443,7 @@
             "line": 186,
             "description": "delete request data serializer",
             "itemtype": "method",
-            "name": "getSerializer",
+            "name": "deleteSerializer",
             "params": [
                 {
                     "name": "data",
@@ -781,7 +781,17 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 45,
+            "line": 7,
+            "example": [
+                "\n    import Ember from 'ember';\n    import model, {DS} from 'ember-easy-orm/mixins/model'\n    \n    const {attr} = DS;\n    export default Ember.Object.extend(model, {\n        url: '/v1/pic',\n        model: {\n            'refer': attr('string'),\n            'desc': attr('string'),\n        }\n    });\n"
+            ],
+            "class": "model",
+            "module": "mixins",
+            "submodule": "model"
+        },
+        {
+            "file": "addon/mixins/model.js",
+            "line": 63,
             "description": "The api host, default is current host",
             "itemtype": "property",
             "name": "host",
@@ -793,7 +803,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 52,
+            "line": 70,
             "description": "The api namespace  like /v1  /v2",
             "itemtype": "property",
             "name": "namespace",
@@ -805,7 +815,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 59,
+            "line": 77,
             "description": "The response data business logic root key like: {'code': 0, 'resp':{'user':[]}, 'msg':''}, the resp is is the rootKey",
             "itemtype": "property",
             "name": "rootKey",
@@ -817,7 +827,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 66,
+            "line": 84,
             "description": "The api url. If rootURL ends with slash , the url should not starts with slash",
             "itemtype": "property",
             "name": "url",
@@ -829,7 +839,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 73,
+            "line": 91,
             "description": "The model object primary key",
             "itemtype": "property",
             "name": "primaryKey",
@@ -841,7 +851,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 80,
+            "line": 98,
             "description": "The object is for extract response data {user: [], comment:[], avatar: {}}",
             "itemtype": "property",
             "name": "displayModel",
@@ -853,7 +863,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 87,
+            "line": 105,
             "description": "url for find request",
             "itemtype": "method",
             "name": "urlForFind",
@@ -867,7 +877,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 97,
+            "line": 115,
             "description": "url for findOne request",
             "itemtype": "method",
             "name": "urlForFindOne",
@@ -881,7 +891,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 106,
+            "line": 124,
             "description": "url for save request",
             "itemtype": "method",
             "name": "urlForSave",
@@ -895,7 +905,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 116,
+            "line": 134,
             "description": "url for delete request",
             "itemtype": "method",
             "name": "urlForDelete",
@@ -909,7 +919,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 125,
+            "line": 143,
             "description": "make api with host, namespace, url",
             "itemtype": "property",
             "name": "api",
@@ -924,7 +934,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 134,
+            "line": 152,
             "description": "save the record to backend",
             "itemtype": "method",
             "name": "save",
@@ -944,7 +954,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 178,
+            "line": 196,
             "description": "create new model with init options and model property",
             "itemtype": "method",
             "name": "createRecord",
@@ -964,7 +974,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 204,
+            "line": 222,
             "description": "delete the record from backend",
             "itemtype": "method",
             "name": "deleteRecord",
@@ -989,7 +999,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 227,
+            "line": 245,
             "description": "find the records from backend according to params",
             "itemtype": "method",
             "name": "find",
@@ -1009,7 +1019,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 250,
+            "line": 268,
             "description": "find only one according to primary id",
             "itemtype": "method",
             "name": "findOne",
@@ -1034,7 +1044,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 272,
+            "line": 290,
             "description": "filter request params",
             "access": "private",
             "tagname": "",
@@ -1056,7 +1066,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 290,
+            "line": 308,
             "description": "find serializer",
             "itemtype": "method",
             "name": "findSerializer",
@@ -1076,7 +1086,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 337,
+            "line": 355,
             "description": "find serializer",
             "itemtype": "method",
             "name": "findOneSerializer",
@@ -1096,7 +1106,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 369,
+            "line": 387,
             "description": "save serializer",
             "itemtype": "method",
             "name": "saveSerializer",
@@ -1116,7 +1126,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 379,
+            "line": 397,
             "description": "delete serializer",
             "itemtype": "method",
             "name": "deleteSerializer",
@@ -1324,6 +1334,10 @@
         {
             "message": "Missing item type\nput request function used in ajax.request property",
             "line": " addon/mixins/ajax.js:61"
+        },
+        {
+            "message": "Missing item type",
+            "line": " addon/mixins/model.js:7"
         }
     ]
 }
