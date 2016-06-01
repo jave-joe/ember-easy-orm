@@ -954,7 +954,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 196,
+            "line": 202,
             "description": "create new model with init options and model property",
             "itemtype": "method",
             "name": "createRecord",
@@ -974,7 +974,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 222,
+            "line": 228,
             "description": "delete the record from backend",
             "itemtype": "method",
             "name": "deleteRecord",
@@ -999,7 +999,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 245,
+            "line": 251,
             "description": "find the records from backend according to params",
             "itemtype": "method",
             "name": "find",
@@ -1019,7 +1019,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 268,
+            "line": 274,
             "description": "find only one according to primary id",
             "itemtype": "method",
             "name": "findOne",
@@ -1044,7 +1044,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 290,
+            "line": 296,
             "description": "filter request params",
             "access": "private",
             "tagname": "",
@@ -1066,7 +1066,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 308,
+            "line": 314,
             "description": "find serializer",
             "itemtype": "method",
             "name": "findSerializer",
@@ -1086,7 +1086,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 355,
+            "line": 361,
             "description": "find serializer",
             "itemtype": "method",
             "name": "findOneSerializer",
@@ -1106,7 +1106,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 387,
+            "line": 393,
             "description": "save serializer",
             "itemtype": "method",
             "name": "saveSerializer",
@@ -1126,7 +1126,7 @@
         },
         {
             "file": "addon/mixins/model.js",
-            "line": 397,
+            "line": 403,
             "description": "delete serializer",
             "itemtype": "method",
             "name": "deleteSerializer",
